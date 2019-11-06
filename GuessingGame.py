@@ -1,15 +1,30 @@
-#List
-List1 = []
-list2 = ["Ha Get Rekt Boi"]
-#Adding to the list
-list2.append("Wow!")
-print(list2)
-
-# Choose a random number between 10 and 100
 import random
-randoNumber = random.radint(10,100)
-print(randoNumber)
+rnum = random.randint (1000,9999)
+print (rnum)
+#guesses vriable
+guesses = 5
 
-# Choose a random item from a list
-randolist = random.choice(list2)
-print(randolist)
+strnum = str (rnum)
+rnumlist = []
+guesslist = []
+for digit in strnum:
+    rnumlist.append (int(digit))
+print (rnumlist)
+
+#stuff for later use
+while guesses != 0:
+    userinput1 = input ("Enter 4 Numbers: ")
+    
+    for digit in userinput1 :
+        guesslist.append(int(digit))
+    if guesslist == rnumlist:
+        print("Congrats")
+        guesses = 0
+        
+    else:
+        for i in rnumlist:
+            for j in guesslist:
+                if i == j :
+                    print (rnumlist(i))
+                else:
+                    print ("incorrect")

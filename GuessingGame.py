@@ -14,17 +14,17 @@ print (rnumlist)
 #stuff for later use
 while guesses != 0:
     userinput1 = input ("Enter 4 Numbers: ")
-    
+
     for digit in userinput1 :
         guesslist.append(int(digit))
     if guesslist == rnumlist:
         print("Congrats")
         guesses = 0
-        
+
     else:
         for i in rnumlist:
             for j in guesslist:
                 if i == j :
-                    print (rnumlist(i))
+                    print (rnumlist.index(i))
                 else:
                     print ("incorrect")

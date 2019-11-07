@@ -28,3 +28,4 @@ while guesses != 0:
                     print (rnumlist.index(i))
                 else:
                     print ("incorrect")
+    guesslist.clear ()

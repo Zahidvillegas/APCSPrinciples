@@ -27,20 +27,23 @@ while guesses != 0:
 
 #if it isnt right then it checks each index to see if they match and shows the player what numbrs match
     else:
+
         for i in guesslist:
             for j in rnumlist:
                 if i == j :
                     rnumindex = rnumlist.index(j)
                     guessindex = guesslist.index(i)
-                    print(rnumindex, guessindex)
                     if rnumindex == guessindex:
                         print ("One of Your numbers matches")
+                        guesses += 1
                         usersuccess.pop(rnumindex)
                         usersuccess.insert(rnumindex, i)
+                        rnumlist.pop(rnumindex)
+                        rnumlist.insert(rnumindex, "-")
+    guesses -= 1
+    print (guesses, usersuccess)
 
 
 
-                    print (usersuccess)
-                else:
-                    print ("-")
     guesslist.clear ()
+

@@ -1,0 +1,255 @@
+def restart():
+    startover = input("Do you want to play again? ")
+    if startover.lower() == "yes":
+        question1()
+    else:
+        print("Okay, thanks for playing!")
+
+# Intro
+def start():
+    PlayGame = input("Do you want to play my game? ")
+    if PlayGame.lower() == "yes":
+        print("We shall start soon!")
+        import time; time.sleep(1.5)
+        question1()
+    elif PlayGame.lower() == "no":
+        print("Get out!")
+        import time; time.sleep(2)
+        print("I'll give you a chance!")
+        import time; time.sleep(1.5)
+        start()
+    else:
+        print("Please say yes or no!")
+        import time; time.sleep(1.5)
+        start()
+
+# First Question
+def question1():
+    FirstQuestion = input("Do you want to go inside a city or a little town you see in the woods? ")
+    if FirstQuestion.lower() == "city":
+        print("You see two paths!")
+        import time; time.sleep(1.5)
+        question2()
+    elif FirstQuestion.lower() == "town":
+        print("You encounter cannibals and they kill you for food!")
+        import time; time.sleep(1.5)
+        print("You Died!")
+        import time; time.sleep(1.5)
+        restart()
+    else:
+        print("Please answer the question ya doofus!")
+        question1()
+
+# Second Question
+def question2():
+    SecondQuestion = input("left or right? ")
+    if SecondQuestion.lower() == "left":
+        print("You go left!")
+        import time; time.sleep(1.5)
+        question3()
+    elif SecondQuestion.lower() == "right":
+        print("You find yourself in a ravine! The rock you're standing on breaks and you fall off!")
+        import time; time.sleep(2.5)
+        print("You Died!")
+        import time; time.sleep(1.5)
+        restart()
+    else:
+        print("")
+        question2()
+
+# Third Question
+def question3():
+    ThirdQuestion = input("The old man in front of you askes if you want to take the red pill or the blue pill? ")
+    if ThirdQuestion.lower() == "blue pill":
+        print("You fall asleep and wake up in a room! It feels like you have Godly Powers now!")
+        import time; time.sleep(1.5)
+        question4()
+    elif ThirdQuestion.lower() == "red pill":
+        print("You Die!")
+        import time; time.sleep(1.5)
+        restart()
+    else:
+        print("Answer the question you fool!")
+        question3()
+
+# Fourth Question
+def question4():
+    FourthQuestion = input("Do you want to fly or use eye lazers? ")
+    if FourthQuestion.lower() == "fly":
+        print("You Fly out of the room and experience the best time of you're life!")
+        import time; time.sleep(2)
+        question5()
+    elif FourthQuestion.lower() == "eye lazers":
+        print("You use the lazers on the wall and the ceiling breaks off and crushes you!")
+        import time; time.sleep(2)
+        print("You Died!")
+        import time; time.sleep(1.5)
+        restart()
+    else:
+        print("Please make my life easier and ANSWER THE QUESTION!!!!")
+        question4()
+
+# Fifth Question
+def question5():
+    FifthQuestion = input("Good or Bad? ")
+    if FifthQuestion.lower() == "good":
+        print("You become a hero and have all the wealth")
+        import time; time.sleep(2)
+        question6()
+    elif FifthQuestion.lower() == "bad":
+        print("you become a villain and go on a rampage!")
+        import time; time.sleep(2)
+        print("You're not supposed to be evil!")
+        import time; time.sleep(2)
+        restart()
+    else:
+        print("Answer the question!!!")
+        question5()
+
+# Sixth Question
+def question6():
+    TheUltimateQuestion = input("You four options; left, right, up, and down. which one will you choose? ")
+    if TheUltimateQuestion.lower() == "left":
+        print("Aliens come down and kidnap you!")
+        import time; time.sleep(1.5)
+        print("You are gone forever")
+        import time; time.sleep(2)
+        restart()
+    elif TheUltimateQuestion.lower() == "right":
+        print("Villains come out of nowhere and beat you to death!")
+        import time; time.sleep(1.5)
+        print("You Died!")
+        import time; time.sleep(2)
+        restart()
+    elif TheUltimateQuestion.lower() == "up":
+        print("You ascend up to space and choke to death!")
+        import time; time.sleep(1.5)
+        print("You Died")
+        import time; time.sleep(2)
+        print("What a unfortunate death!")
+        import time; time.sleep(2)
+        restart()
+    elif TheUltimateQuestion.lower() == "down":
+        print("You go down to earth only to find Thanos sitting there!")
+        import time; time.sleep(1.5)
+        endgame()
+    else:
+        print("This is the ultimate question dangit! ANSWER IT!")
+        import time; time.sleep(1.5)
+        question6()
+
+# EndGame!
+def endgame():
+    EndGame = input("You stand before Thanos! want to fight him or run away? ")
+    if EndGame.lower() == "fight him":
+        print("You take out you're lightsaber! WAIT WHAT!? How did you get a lightsaber? oh well, USE THE FORCE!!")
+        import time; time.sleep(2)
+        print("You throw you're lightsaber at Thanos and you cut off his arm with the infinity gauntlet!")
+        import time; time.sleep(1.5)
+        endgame2()
+    elif EndGame.lower() == "run away":
+        print("You run away! Thanos quickly uses his infinity gauntlet to destroy you")
+        import time; time.sleep(3.5)
+        print("You Died!")
+        import time; time.sleep(2)
+        print("You got the bad ending!")
+        import time; time.sleep(3)
+        restart()
+    else:
+        print("ANSWER!!!!!")
+        import time; time.sleep(1.5)
+        endgame()
+
+# Second part of endgame
+def endgame2():
+    Endgame2 = input("You see the infinity gauntlet on the ground! Do you want to grab it or let it be? ")
+    if Endgame2.lower() == "grab it":
+        print("You grab the infinity gauntlet!")
+        import time; time.sleep(1.5)
+        infinity()
+    elif Endgame2.lower() == "let it be":
+        print("Thanos grabs the infinity gauntlet and YEETS it! to let nobody else use it!")
+        import time; time.sleep(1.5)
+        print("You wasted you're chance to use the infinity gauntlet against Thanos! But you still have the force to determine you're fate")
+        import time; time.sleep(1.5)
+        jedi()
+    else:
+        print("Cmon man! It's getting better! ANSWER THE QUESTION!!!")
+        import time; time.sleep(1.5)
+        endgame2()
+
+# Infinity Ending
+def infinity():
+    Infinity = input("Do you want to put it on? ")
+    if Infinity.lower() == "yes":
+        print("You put on the infinity gauntlet!")
+        import time; time.sleep(1.5)
+        print("You quickly use the infinity gauntlets power to SNAP Thanos away!")
+        import time; time.sleep(1.5)
+        print("The great power of the infinity gauntlet burned you're entire arm but you still survived and getting medical attention!")
+        import time; time.sleep(1.5)
+        print("You become a TRUE HERO! Everybody loves you!")
+        import time; time.sleep(1.5)
+        print("You got the good ending for the infinity route!")
+        import time; time.sleep(1.5)
+        restart()
+    elif Infinity.lower() == "no":
+        print("You don't use the infinity gauntlet and now Thanos takes the advantage and beats you to death before you could use it against him!")
+        import time; time.sleep(1.5)
+        print("Thanos takes back the infinity gauntlet and rules the world leaving all the people to suffer.")
+        import time; time.sleep(1.5)
+        print("You got the bad ending for the infinity route! Too bad! :(")
+        import time; time.sleep(1.5)
+        restart()
+    else:
+        print("Answer the question plz!")
+        import time; time.sleep(1.5)
+        infinity()
+
+# The force ending
+def jedi():
+    Jedi = input("Do you want to force choke Thanos or use you're lightsaber? ")
+    if Jedi.lower() == "force choke":
+        print("You force choke Thanos to death!")
+        import time; time.sleep(1.5)
+        print("Yes he died that quickly because nobody was there to stop the force choke")
+        import time; time.sleep(1.5)
+        print("You got the eh ending for the force route!")
+        restart()
+    elif Jedi.lower() == "lightsaber":
+        print("You and Thanos go on a lightsaber battle! Thanos secretly had a lightsaber just in case if he were to fight a jedi!")
+        import time; time.sleep(1.5)
+        print("Thanos takes the high ground! ")
+        import time; time.sleep(1.5)
+        highground()
+    else:
+        print("Go back and answer the question!")
+        import time; time.sleep(1.5)
+        jedi()
+
+
+# High Ground
+def highground():
+    HighGround = input("Do you want to jump for it or force pull? ")
+    if HighGround.lower() == "jump":
+        print("Thanos cuts off you're you legs leaving you on the sand")
+        import time; time.sleep(1.5)
+        print("Then you start to get on fire! Burning you're skin! You yell for help but nobody came.")
+        import time; time.sleep(1.5)
+        print("you got the bad ending for the force route")
+        restart()
+    elif HighGround.lower() == "force pull":
+        print("You force pull Thanos into the lava! Burning him to a crisp!")
+        import time; time.sleep(1.5)
+        print("You got out safely and rest for a bit!")
+        import time; time.sleep(1.5)
+        print("You got the good ending for the force ending!")
+        restart()
+    else:
+        print("FIGHT!!")
+        import time; time.sleep(1.5)
+        highground()
+
+
+
+start()

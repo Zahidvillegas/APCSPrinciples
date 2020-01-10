@@ -9,24 +9,24 @@ t.pensize(6)
 
 #This starts the first line that goes down
 t.penup()
-t.setpos(-100,200)
+t.setpos(-100,220)
 t.pendown()
 t.right(90)
-t.forward(400)
+t.forward(450)
 
 #This starts the second line that goes down
 t.penup()
-t.setpos(100,200)
+t.setpos(100,220)
 t.pendown()
 t.right(0)
-t.forward(400)
+t.forward(450)
 
 #Now the line goes the other way
 t.penup()
 t.setpos(-250,-80)
 t.pendown()
 t.left(90)
-t.forward(500)
+t.forward(450)
 
 #Another line gets drawn
 t.penup()

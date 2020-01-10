@@ -1,0 +1,59 @@
+import turtle
+
+window = turtle.Screen()
+window.bgcolor("green")
+t = turtle.Turtle()
+t.color("black")
+t.shape("turtle")
+t.pensize(6)
+
+#This starts the first line that goes down
+t.penup()
+t.setpos(-100,200)
+t.pendown()
+t.right(90)
+t.forward(400)
+
+#This starts the second line that goes down
+t.penup()
+t.setpos(100,200)
+t.pendown()
+t.right(0)
+t.forward(400)
+
+#Now the line goes the other way
+t.penup()
+t.setpos(-250,-80)
+t.pendown()
+t.left(90)
+t.forward(500)
+
+#Another line gets drawn
+t.penup()
+t.setpos(250,80)
+t.pendown()
+t.right(0)
+t.backward(500)
+
+#onscreenclick starts here so it can draw the X and O
+import turtle
+
+xclick = 0
+yclick = 0
+
+def getcoordinates():
+    turtle.onscreenclick(modifyglobalvariables)
+
+def modifyglobalvariables(rawx,rawy):
+    global xclick
+    global yclick
+    xclick = int(rawx//1)
+    yclick = int(rawy//1)
+    print(xclick)
+    print(yclick)
+
+getcoordinates()
+
+
+
+window.mainloop()

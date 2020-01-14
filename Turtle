@@ -1,58 +1,91 @@
 import turtle
-
+# defining the window
 window = turtle.Screen()
 window.bgcolor("green")
+window.title("Tic Tac Toe")
+
+# defining the turtle i.e. determines the turtle shape/size/color
 t = turtle.Turtle()
 t.color("black")
+t.pensize(8)
 t.shape("turtle")
-t.pensize(6)
+t.shapesize(1)
+t.speed(8)
 
-#This starts the first line that goes down
-t.penup()
-t.setpos(-100,220)
-t.pendown()
-t.right(90)
-t.forward(450)
+def board():
+    # each following line moves the pen/turtle and creates the board for the game
+    t.pu()
+    t.goto(-300,-100)
+    t.pd()
+    t.forward(600)
+    t.pu()
+    t.goto(-300,100)
+    t.pd()
+    t.forward(600)
+    t.pu()
+    t.goto(-100,250)
+    t.pd()
+    t.right(90)
+    t.fd(500)
+    t.pu()
+    t.goto(100,250)
+    t.pd()
+    t.fd(500)
+    t.pu()
 
-#This starts the second line that goes down
-t.penup()
-t.setpos(100,220)
-t.pendown()
-t.right(0)
-t.forward(450)
+# drawing an x
+t.write("x", font = ("arial",200))
 
-#Now the line goes the other way
-t.penup()
-t.setpos(-250,-80)
-t.pendown()
-t.left(90)
-t.forward(500)
+# on screen click to place an x or o
+def gotoandprint(x, y):
+    t.goto(x, y)
+    print(x,y)
+    location(x,y)
 
-#Another line gets drawn
-t.penup()
-t.setpos(250,80)
-t.pendown()
-t.right(0)
-t.backward(500)
+def gotospot(x,y):
+    t.goto(x,y)
+    location(x,y)
 
-#onscreenclick starts here so it can draw the X and O
-import turtle
+def location(x,y) :
+    if x > 100 and x < 300 and y > 100 and y < 250:#top right
+        t.pu()
+        t.goto(150,100)
+        t.write("X", font=("times new roman", 200))
+    elif x > -100 and x < 100 and y > 100 and y < 250:#top mid
+        t.pu()
+        t.goto(-50, 100)
+        t.write("X", font=("times new roman", 200))
+    elif x > -300 and x < -100 and y > 100 and y < 250: #top left
+        t.pu()
+        t.goto(-250, 100)
+        t.write("X", font=("times new roman", 200))
+    elif x > 100 and x < 300 and y > -100 and y < 100: #midright
+        t.pu()
+        t.goto(150, -100)
+        t.write("X", font=("times new roman", 200))
+    elif x > -100 and x < 100 and y > -100 and y < 100: #midmid
+        t.pu()
+        t.goto(-50, -100)
+        t.write("X", font=("times new roman", 200))
+    elif x > -300 and x < -100 and y > -100 and y < 100: #midleft
+        t.pu()
+        t.goto(-250, -100)
+        t.write("X", font=("times new roman", 200))
+    elif x > 100 and x < 300 and y > -250 and y < -100: #bot right
+        t.pu()
+        t.goto(150, -300)
+        t.write("X", font=("times new roman", 200))
+    elif x > -100 and x < 100 and y > -250 and y < -100: #bot mid
+        t.pu()
+        t.goto(-50, -300)
+        t.write("X", font=("times new roman", 200))
+    elif x > -300 and x < -100 and y > -250 and y < -100: #bot left
+        t.pu()
+        t.goto(-250, -300)
+        t.write("X", font=("times new roman", 200))
 
-xclick = 0
-yclick = 0
-
-def getcoordinates():
-    turtle.onscreenclick(modifyglobalvariables)
-
-def modifyglobalvariables(rawx,rawy):
-    global xclick
-    global yclick
-    xclick = int(rawx//1)
-    yclick = int(rawy//1)
-    print(xclick)
-    print(yclick)
-
-getcoordinates()
+board()
+window.onscreenclick(gotoandprint)
 
 
 

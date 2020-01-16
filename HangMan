@@ -1,0 +1,55 @@
+import turtle
+
+#creating the window and turtle
+window = turtle.Screen()
+window.setup(500,800,400)
+t = turtle.Turtle()
+
+#Creating the stand for the hangman
+t.pu() #pen up
+t.setpos(-250,80)
+t.pd() #pen down
+t.speed(5)
+t.fd(100)
+t.rt(180)
+t.fd(50)
+t.rt(90)
+t.fd(170)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(50)
+
+#This is the code where you have to guess the number
+import random
+n = random.randint(1, 100)
+guess = int(input("Enter an integer from 1 to 100: "))
+while n != "guess":
+    print
+    if guess < n:
+        print ("guess is low")
+        guess = int(input("Enter an integer from 1 to 100: "))
+    elif guess > n:
+        print ("guess is high")
+        guess = int(input("Enter an integer from 1 to 100: "))
+    else:
+        print ("you guessed it!")
+        break
+    print
+
+while True:
+    # main program
+    while True:
+        answer = input('Run again? (y/n): ')
+        if answer in ('y', 'n'):
+            break
+        print ('Invalid input.')
+    if answer == 'y':
+        continue
+    else:
+        print ('Goodbye')
+        break
+
+
+
+window.mainloop()

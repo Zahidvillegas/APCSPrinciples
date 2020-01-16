@@ -40,10 +40,10 @@ while n != "guess":
 while True:
     # main program
     while True:
-        answer = input('Run again? (y/n): ')
+        answer = input('Do you want to play again? (y/n): ')
         if answer in ('y', 'n'):
             break
-        print ('Invalid input.')
+        print ('Y or N plz.')
     if answer == 'y':
         continue
     else:
@@ -53,3 +53,4 @@ while True:
 
 
 window.mainloop()
+

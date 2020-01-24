@@ -4,15 +4,17 @@ turns = 0
 import turtle
 #defining the window
 window = turtle.Screen()
-window.bgcolor("dodger blue")
+window.bgcolor("green")
 window.title("Tic Tac Toe")
 #defining the turtles
 t = turtle.Turtle()
-t.color("indian red")
-t.pensize(9)
-t.shapesize(3)
+t.hideturtle()
+t.color("black")
+t.pensize(6)
+t.shapesize(1)
 t.shape("turtle")
-t.speed(5)
+t.speed(7)
+
 
 #move the turtle
 def square() :

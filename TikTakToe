@@ -100,7 +100,8 @@ def Game():
             elif all(each in xmoves for each in w8):
                 writexwin()
                 restart()
-        elif len(c) == 9 and (not all(each in xmoves for each in w1) or not all(each in xmoves for each in w2) or not all(each in xmoves for each in w3) or not all(each in xmoves for each in w4) or not all(each in xmoves for each in w5) or not all(each in xmoves for each in w6) or not all(each in xmoves for each in w7) or not all(each in xmoves for each in w8))
+        elif len(c) == 9 and (not all(each in xmoves for each in w1) or not all(each in xmoves for each in w2) or not all(each in xmoves for each in w3) or not all(each in xmoves for each in w4) or not all(each in xmoves for each in w5) or not all(each in xmoves for each in w6) or not all(each in xmoves for each in w7) or not all(each in xmoves for each in w8)):
+            restart()
 # 3 o's in a row
     def owins():
         if all(each in omoves for each in w1):
@@ -145,7 +146,7 @@ def Game():
                 drawx()
                 place.append (1)
                 xmoves.append (1)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -156,7 +157,7 @@ def Game():
                 drawx()
                 place.append (2)
                 xmoves.append(2)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -167,7 +168,7 @@ def Game():
                 drawx()
                 place.append (3)
                 xmoves.append(3)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -178,7 +179,7 @@ def Game():
                 drawx()
                 place.append (4)
                 xmoves.append(4)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -189,7 +190,7 @@ def Game():
                 drawx()
                 place.append (5)
                 xmoves.append(5)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -200,7 +201,7 @@ def Game():
                 drawx()
                 place.append (6)
                 xmoves.append(6)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -211,7 +212,7 @@ def Game():
                 drawx()
                 place.append (7)
                 xmoves.append(7)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -222,7 +223,7 @@ def Game():
                 drawx()
                 place.append (8)
                 xmoves.append(8)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -232,7 +233,7 @@ def Game():
                 t.goto(-250, -300)
                 drawx()
                 place.append (9)
-                c.append()
+                c.append("oof")
                 xwins()
             else:
                 locationx(x,y)
@@ -245,7 +246,7 @@ def Game():
                 drawo()
                 place.append (1)
                 omoves.append(1)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)
@@ -256,7 +257,7 @@ def Game():
                 drawo()
                 place.append (2)
                 omoves.append(2)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)
@@ -267,7 +268,7 @@ def Game():
                 drawo()
                 place.append (3)
                 omoves.append(3)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)
@@ -278,7 +279,7 @@ def Game():
                 drawo()
                 place.append (4)
                 omoves.append(4)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)
@@ -289,7 +290,7 @@ def Game():
                 drawo()
                 place.append (5)
                 omoves.append(5)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)
@@ -300,7 +301,7 @@ def Game():
                 drawo()
                 place.append (6)
                 omoves.append(6)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)
@@ -311,7 +312,7 @@ def Game():
                 drawo()
                 place.append (7)
                 omoves.append(7)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)
@@ -322,7 +323,7 @@ def Game():
                 drawo()
                 place.append (8)
                 omoves.append(8)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)
@@ -333,7 +334,7 @@ def Game():
                 drawo()
                 place.append (9)
                 omoves.append(9)
-                c.append()
+                c.append("oof")
                 owins()
             else:
                 locationo(x,y)

@@ -1,0 +1,94 @@
+list = []
+adjectiveList = []
+nounList = []
+pluralnounList = []
+superlativeAdjectiveList = []
+liquidList = []
+schoolList = []
+celebrityList = []
+
+def start():
+    userInput = input("Which MadLib Do you want? school or birthday? ")
+    if userInput.lower() == "school":
+        print("Good Choice!")
+        import time; time.sleep(1.5)
+        school()
+    elif userInput.lower() == "birthday":
+        print("Good Choice!")
+        import time; time.sleep(1.5)
+
+    else:
+        print("Plz Answer the question!")
+        import time; time.sleep(1.5)
+        start()
+
+def school():
+    userInput = input("Give me a adjective: ")
+    if userInput.isalpha():
+        adjective2()
+
+def adjective2():
+    userInput = input("Give me a second adjective: ")
+    if userInput.isalpha():
+        adjective3()
+
+def adjective3():
+    userInput = input("Give me a third adjective: ")
+    if userInput.isalpha():
+        celebrity()
+def celebrity():
+    userInput = input("Give me a celebrity: ")
+    if userInput.isalpha():
+        nameofschool()
+
+def nameofschool():
+    userInput = input("Name of school: ")
+    if userInput.isalpha():
+        noun1()
+
+def noun1():
+    userInput = input("Give me a noun: ")
+    if userInput.isalpha():
+        noun2()
+
+def noun2():
+    userInput = input("Give me a second noun: ")
+    if userInput.isalpha():
+        noun3()
+
+def noun3():
+    userInput = input("Give me a third noun: ")
+    if userInput.isalpha():
+        number1()
+
+def number1():
+    userInput = input("Give me a number: ")
+    if userInput.isalpha():
+        number2()
+
+def number2():
+    userInput = input("Give me a second number: ")
+    if userInput.isalpha():
+        pluralnoun1()
+        
+def pluralnoun1():
+    userInput = input("Give me a plural noun: ")
+    if userInput.isalpha():
+        pluralnoun2()
+
+def pluralnoun2():
+    userInput = input("Give me a second plural noun: ")
+    if userInput.isalpha():
+        superlativeAdjective()
+
+def superlativeAdjective():
+    userInput = input("Give me a superlative adjective: ")
+    if userInput.isalpha():
+        liquid()
+
+def liquid():
+    userInput = input("Give me a type of liquid: ")
+    if userInput.isalpha():
+        print()
+
+start()
